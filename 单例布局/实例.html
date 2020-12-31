@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* 弹性布局 */
+            /* display: flex;
+            justify-content: center; */
+
+            /* 外边距+平移 */
+            /* position: relative; */
+
+            /* 外边距 */
+            /* width: 100%;
+            background-color: pink; */
+
+            /* 行内块元素 */
+            text-align: center;
+        }
+        .box{
+            /* flex-basis: 90%; */
+
+            /* 外边距+平移实现单例布局 */
+            /* position: absolute;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%); */
+
+            /* 外边距 */
+            /* width: calc(100% - 10%);
+            margin: 0 auto; */
+
+            /* 行内块元素 */
+            width: 90%;
+            display: inline-block;
+
+        }
+        .box>li{
+            height: 100px;
+            list-style: none;
+            background-color: #cccccc;
+            margin-bottom: 10px;
+        }
+        .box>li:nth-child(1){
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
