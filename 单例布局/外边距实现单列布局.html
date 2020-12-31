@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            background-color: gray;
+        }
+        .box{
+            width: calc(100% - 10%);
+            height: 100%;
+            background-color: #fff;
+            /* 外边距上下为0、左右为自动 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        这种方法不仅兼容性也非常的优异，同时也是最简单最好用的：最简单的 CSS 技术就代表了最优越的兼容性
+     -->
+     <div class="box">外边距实现单例布局</div>
+</body>
+</html>
