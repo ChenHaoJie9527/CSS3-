@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            position: relative;
+        }
+
+        .mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: gray;
+            opacity: 0.5;
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #ffffff;
+            width: 300px;
+            height: 200px;
+            margin-left: -150px;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        top: 50%; 和 left: 50%; 会让盒子的左上角定位到中央位置；
+        所以给上外边距和左外边距一个负值将盒子拉到中央位置；
+        margin 的百分比并不是相对于自身，而是相对于父元素的宽度，所以这里不能写成 -50%；
+        此种实现方式兼容性也同样十分良好。
+     -->
+    <div class="mask"></div>
+    <div class="box"></div>
+</body>
+
+</html>
