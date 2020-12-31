@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            position: relative;
+        }
+        .mask{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: gray;
+            opacity: .5;
+        }
+        .box{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 25%;
+            background-color: #ffffff;
+            margin: auto;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        居中布局通常分为两种，一种是固定宽高，另一种是非固定宽高。
+        固定宽高很好理解，非固定宽高通常都是靠里面的内容来撑起盒子的高度，内容时多时少。
+        如果不给定宽高，盒子将会变得和父元素一样大，因为绝对定位上左右都是0，紧贴在父元素的边上
+        给定了宽高，但不写margin的话，盒子始终在左上角，因为 top 和 left 的优先级更高。
+        给了 margin: auto; 的话，浏览器会自动填充边距，令其居中。
+        此种实现方式优点是兼容性很好，几乎没用到任何 CSS 的新特性，全部都是经典属性。
+     -->
+     <div class="mask"></div>
+     <div class="box"></div>
+</body>
+</html>
