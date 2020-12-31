@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        1. 绝对定位 + 平移 是 绝对定位 + 负边距的改进版
+        2. 由于负边距的百分比并不是相对于自身，而是相对于父元素，所以只能写具体的像素值，显得不够智能。
+        3. 而平移相对于自身，只需要无脑写 -50% 就可以了。
+
+        优势：   margin 的百分比是相对于父元素的宽；
+                translate 函数的百分比是相对于自身；
+                不仅适用于未知宽高，也同样适用于固定宽高的居中布局。
+        场景：  适用于模态框等弹窗，用于通知用户，引导用户信息
+     -->
+    <div class="box">居中显示</div>
+</body>
+
+</html>
