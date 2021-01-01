@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chinese-gradient">
+    <title>Document</title>
+    <style>
+        /* 
+            如果项目要求必须兼容低版本浏览器的话，flex和grid可能都不能用了，只能用CSS2的语法来实现了。
+            这种情况下float是一个非常好的选择，来看一下具体怎么实现。
+         */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            float: left;
+            margin: 2px;
+            width: 100px;
+            height: 50px;
+            background: var(--墨色);
+        }
+        ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

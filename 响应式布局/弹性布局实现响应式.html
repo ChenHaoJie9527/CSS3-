@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chinese-gradient">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul>li{
+            list-style: none;
+            height: 50px;
+            margin: 2px;
+            background: var(--墨色);
+            /* 
+                flex-basis相当于Width
+                flex需在给定宽度后项目才能独占整个空间
+             */
+            flex-basis: 100px;
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
