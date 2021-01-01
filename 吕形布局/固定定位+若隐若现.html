@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chinese-gradient">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .header {
+            height: 60px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background: var(--火红);
+        }
+
+        .main {
+            height: 1000px;
+            background: var(--湖蓝);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="main"></div>
+    <script>
+        const header = document.querySelector(".header");
+        window.addEventListener("scroll", (e) => {
+            const scroll = document.documentElement.scrollTop;
+            const opacity = scroll <= 150 ? scroll / 150 : 1;
+            header.style.opacity = opacity;
+        })
+    </script>
+</body>
+
+</html>
