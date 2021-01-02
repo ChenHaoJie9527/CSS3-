@@ -43,12 +43,16 @@
             margin: .5px;
 
             /* 深蓝渐变 */
-            background: var(--黛蓝);
+            background: var(--紫灰);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
 
+        }
+        li:hover{
+            color: red;
+            z-index: 1;
         }
     </style>
 </head>
@@ -65,6 +69,15 @@
         <li>8</li>
         <li>9</li>
     </ul>
+    <script>
+        const li = document.querySelectorAll("li");
+        Array.from(li).forEach((item,index)=>{
+            item.addEventListener("click",e=>{
+                const text = e.target.innerText;
+                alert(text);
+            })
+        })
+    </script>
 </body>
 
 </html>

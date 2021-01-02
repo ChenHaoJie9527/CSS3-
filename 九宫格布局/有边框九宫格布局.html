@@ -29,22 +29,37 @@
             height: 33%;
             border-right: 1px #ccc solid;
             border-bottom: 1px #ccc solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        li:hover{
+            color: #fff;
+            background: red;
         }
     </style>
 </head>
 
 <body>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
     </ul>
+    <script>
+        const lis = document.querySelectorAll("li");
+        Array.from(lis).forEach((item,index)=>{
+            item.addEventListener("click",e=>{
+                alert(e.target.innerText);
+            })
+        })
+    </script>
 </body>
 
 </html>
