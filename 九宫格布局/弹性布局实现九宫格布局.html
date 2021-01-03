@@ -50,7 +50,8 @@
             justify-content: center;
 
         }
-        li:hover{
+
+        li:hover {
             color: red;
             z-index: 1;
         }
@@ -71,8 +72,8 @@
     </ul>
     <script>
         const li = document.querySelectorAll("li");
-        Array.from(li).forEach((item,index)=>{
-            item.addEventListener("click",e=>{
+        Array.from(li).forEach((item, index) => {
+            item.addEventListener("click", e => {
                 const text = e.target.innerText;
                 alert(text);
             })
